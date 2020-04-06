@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/White"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notificationTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notification"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/circularstd_book"
+            android:textColor="@color/SkipColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableEnd="@mipmap/ic_toggle_on"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/smsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sms_notifications"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/circularstd_book"
+            android:textColor="@color/SkipColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notificationTV"
+            app:layout_constraintEnd_toEndOf="@id/notificationTV"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:drawableEnd="@mipmap/ic_toggle_off"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notifyTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notify_me_on_no_network"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/circularstd_book"
+            android:textColor="@color/SkipColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/smsTV"
+            app:layout_constraintEnd_toEndOf="@id/notificationTV"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:drawableEnd="@mipmap/ic_toggle_on"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/viewGrey"
+            app:layout_constraintStart_toStartOf="@id/smsTV"
+            app:layout_constraintEnd_toEndOf="@id/smsTV"
+            app:layout_constraintTop_toBottomOf="@id/notifyTV"
+            android:layout_marginTop="@dimen/_15sdp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/termsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_and_conditions"
+            android:textSize="@dimen/_12sp"
+            android:fontFamily="@font/circularstd_book"
+            android:textColor="@color/MediumBlue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewLine"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/copyrightsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright_signal_a_doc_all_rights_reserved"
+            android:textSize="@dimen/_10sp"
+            android:fontFamily="@font/circularstd_book"
+            android:textColor="@color/SkipColor"
+            app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:lineSpacingExtra="@dimen/_2sp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

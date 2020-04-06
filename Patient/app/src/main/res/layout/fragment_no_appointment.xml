@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scheduleTV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:text="@string/schedule_appointment"
+            android:background="@drawable/blue_border_box"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_16sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:drawableStart="@mipmap/ic_schedule_blue"
+            android:drawablePadding="@dimen/_10sdp"
+
+            android:gravity="center_vertical"/>
+        <View
+            android:id="@+id/appointV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_22sdp"
+
+            android:background="@drawable/box_green_clicked"
+            app:layout_constraintTop_toBottomOf="@id/scheduleTV"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/calenderIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@mipmap/ic_calendar_big"
+            app:layout_constraintTop_toTopOf="@id/appointV"
+            app:layout_constraintStart_toStartOf="@id/appointV"
+            app:layout_constraintEnd_toEndOf="@id/appointV"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/noAppointTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Neon"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="No appointment scheduled"
+            app:layout_constraintTop_toBottomOf="@id/calenderIV"
+            app:layout_constraintStart_toStartOf="@id/appointV"
+            app:layout_constraintEnd_toEndOf="@id/appointV"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="Tap to add"
+            app:layout_constraintTop_toBottomOf="@id/noAppointTV"
+            app:layout_constraintStart_toStartOf="@id/appointV"
+            app:layout_constraintEnd_toEndOf="@id/appointV"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

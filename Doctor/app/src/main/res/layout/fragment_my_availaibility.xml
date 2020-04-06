@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/selectADayTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:text="@string/select_a_day_to_see_your_availability"
+                android:textColor="@color/Neon"
+                android:textSize="@dimen/_16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <CalendarView
+                android:id="@+id/calenderV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20dp"
+                android:focusedMonthDateColor="@color/Neon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectADayTV" />
+
+            <View
+                android:id="@+id/greenView"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/green_filled_circle"
+                app:layout_constraintStart_toStartOf="@id/calenderV"
+                app:layout_constraintTop_toBottomOf="@id/calenderV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/openTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="@string/open"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="@id/greenView"
+                app:layout_constraintStart_toEndOf="@id/greenView"
+                app:layout_constraintTop_toTopOf="@id/greenView" />
+
+
+            <View
+                android:id="@+id/orangeView"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/orange_filled_circle"
+                app:layout_constraintStart_toEndOf="@id/openTV"
+                app:layout_constraintTop_toBottomOf="@id/calenderV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/someTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="@string/some_available"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="@id/greenView"
+                app:layout_constraintStart_toEndOf="@id/orangeView"
+                app:layout_constraintTop_toTopOf="@id/greenView" />
+
+
+            <View
+                android:id="@+id/greyView"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/circle_grey"
+                app:layout_constraintStart_toEndOf="@id/someTV"
+                app:layout_constraintTop_toBottomOf="@id/calenderV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="@string/not_available"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="@id/greenView"
+                app:layout_constraintStart_toEndOf="@id/greyView"
+                app:layout_constraintTop_toTopOf="@id/greenView" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_25sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:text="March 20, 2020"
+                android:textAllCaps="true"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_10sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calenderV" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/timeSlotRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/timeTV"
+                app:layout_constraintTop_toBottomOf="@+id/timeTV"
+                app:spanCount="4" />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/createAvailaibilityCV"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:background="@drawable/blue_border_box"
+                app:layout_constraintTop_toBottomOf="@id/timeSlotRV"
+                app:layout_constraintStart_toStartOf="@id/timeSlotRV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/createTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@mipmap/ic_schedule_blue"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="center"
+                        android:text="@string/create_abailaibility"
+                        android:textAllCaps="true"
+                        android:textColor="@color/MediumBlue"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

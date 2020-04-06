@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/waitBT">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_13sdp"
+                        android:layout_marginEnd="@dimen/_13sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/circularstd_book"
+                            android:lineSpacingExtra="@dimen/_6sp"
+                            android:text="@string/select_doctor_text"
+                            android:textColor="@color/Greenish"
+                            android:textSize="@dimen/_16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/CardColor" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp">
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_bg"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:paddingBottom="@dimen/_5sdp">
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/circularstd_book"
+                                    android:lineSpacingExtra="@dimen/_4sp"
+                                    android:text="@string/filter"
+                                    android:textColor="@color/SkipColor"
+                                    android:textSize="@dimen/_10sp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/transparent"
+                                    android:drawableEnd="@drawable/ic_dropdown"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:fontFamily="@font/circularstd_book"
+                                    android:hint="General Practitional"
+                                    android:lineSpacingExtra="@dimen/_6sp"
+                                    android:textColor="@color/pastText"
+                                    android:textColorHint="@color/pastText"
+                                    android:textSize="@dimen/_14sp" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/circularstd_book"
+                                android:lineSpacingExtra="@dimen/_4sp"
+                                android:text="@string/availability"
+                                android:textColor="@color/avalibale_color"
+                                android:textSize="@dimen/_14sp" />
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:drawableStart="@mipmap/group_708"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:fontFamily="@font/circularstd_book"
+                            android:gravity="center"
+                            android:lineSpacingExtra="@dimen/_8sp"
+                            android:text="@string/my_favorite_doctors"
+                            android:textColor="@color/avalibale_color"
+                            android:textSize="@dimen/_14sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/availaibleDoctorsRV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="2" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <com.signalDoc_patient.utils.CustomButton
+                    android:id="@+id/waitBT"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/button_blue_shape"
+                    android:letterSpacing="0.1"
+                    android:lineSpacingExtra="@dimen/_3sp"
+                    android:text="@string/wait_for_a_doctor"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/_16sp" />
+            </RelativeLayout>
+
+
+            <include
+                android:id="@+id/bottom"
+                layout="@layout/consultation_bottom_sheet" />
+
+            <include
+                android:id="@+id/comfirmBottom"
+                layout="@layout/confirm_bottom_sheet" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

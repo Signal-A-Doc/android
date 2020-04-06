@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handleClick"
+            type="com.signalDoc_doctor.utils.ClickHandler" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/professionalTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_26sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:lineSpacingExtra="@dimen/_2ssp"
+                android:text="@string/professional_status"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+
+                android:textColor="@color/backBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/doctorET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bottom_grey_line"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_3ssp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/professionalTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/proIndemnityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@string/professional_indemnity"
+                android:textColor="@color/skipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/doctorET" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/yesRB"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:onClick="@{View->handleClick.onHandleClick(View)}"
+                android:text="@string/yes"
+                android:textSize="@dimen/_11sp"
+                app:layout_constraintEnd_toStartOf="@+id/noRB"
+                app:layout_constraintTop_toTopOf="@+id/noRB" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/noRB"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:onClick="@{View->handleClick.onHandleClick(View)}"
+                android:text="@string/no"
+                android:textSize="@dimen/_11sp"
+                app:layout_constraintEnd_toEndOf="@id/doctorET"
+                app:layout_constraintTop_toBottomOf="@+id/doctorET" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/uploadTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:onClick="@{View->handleClick.onHandleClick(View)}"
+                android:text="@string/upload"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/doctorET"
+                app:layout_constraintTop_toBottomOf="@+id/noRB" />
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/profCertificateIV"
+                android:layout_width="@dimen/_91sdp"
+                android:layout_height="@dimen/_64sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="@id/doctorET"
+                app:layout_constraintTop_toBottomOf="@+id/uploadTV"
+                app:siRadius="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:drawableStart="@mipmap/ic_cross_grey"
+                android:drawablePadding="@dimen/_7sdp"
+                 android:lineSpacingExtra="@dimen/_4sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/remove"
+
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintBottom_toBottomOf="@id/profCertificateIV"
+                app:layout_constraintStart_toEndOf="@+id/profCertificateIV" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:background="@color/editTextLine"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profCertificateIV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mdcnNumberTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@string/mdcn_folio_number"
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/folioEditTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/backBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mdcnNumET"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bottom_grey_line"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="number"
+                android:lineSpacingExtra="@dimen/_3ssp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mdcnNumberTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/annPraTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@string/annual_practicing_license"
+                android:textColor="@color/skipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/mdcnNumET" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/uploadAnnualTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/upload"
+                android:textColor="@color/backBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintTop_toBottomOf="@+id/mdcnNumET" />
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/annProfCertificateIV"
+                android:layout_width="@dimen/_91sdp"
+                android:layout_height="@dimen/_64sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="@id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/annPraTV"
+                app:siRadius="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:drawableStart="@mipmap/ic_cross_grey"
+                android:drawablePadding="@dimen/_7sdp"
+                android:lineSpacingExtra="@dimen/_4sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/remove"
+
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintBottom_toBottomOf="@id/annProfCertificateIV"
+                app:layout_constraintStart_toEndOf="@+id/annProfCertificateIV" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:background="@color/editTextLine"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/annProfCertificateIV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/regNumberTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@string/registration_number"
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/regisTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/backBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/regNumET"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bottom_grey_line"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="number"
+                android:lineSpacingExtra="@dimen/_3ssp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/regNumberTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/issueDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@string/issue_date"
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/regNumET" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/issueTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/backBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintTop_toBottomOf="@+id/regNumET" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/dateET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bottom_grey_line"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_3ssp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/issueDateTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/expiryDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@string/expiry_date"
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/dateET" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/expTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/backBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintTop_toBottomOf="@+id/dateET" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/dateExpiryET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bottom_grey_line"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_3ssp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/DarkBluebg"
+
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/expiryDateTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/areaSpeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@string/areas_of_specialization"
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/dateExpiryET" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/addSpecilizationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/backBlue"
+                android:textSize="@dimen/_10sp"
+
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintTop_toBottomOf="@+id/dateExpiryET" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/specificationRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="@id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@id/areaSpeTV" />
+
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:background="@color/editTextLine"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specificationRV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/summaryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:text="@string/profile_summary"
+                android:textColor="@color/warm_grey"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/professionalTV"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:lineSpacingExtra="@dimen/_6ssp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/backBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/summaryET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@drawable/bottom_grey_line"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_3ssp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="@id/editTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/summaryTV" />
+
+
+            <com.signalDoc_doctor.utils.CustomButton
+                android:id="@+id/loginBT"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/button_blue_shape"
+                android:letterSpacing="0.1"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/save_changes"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/summaryET"
+                app:layout_constraintStart_toStartOf="@id/summaryET"
+                app:layout_constraintTop_toBottomOf="@id/summaryET" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

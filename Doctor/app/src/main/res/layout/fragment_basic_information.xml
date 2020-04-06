@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIV"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_margin="@dimen/_15sdp"
+            android:src="@mipmap/ic_defaultuser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:siRadius="@dimen/_8sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/uploadTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="@drawable/grey_border_box"
+            android:drawableStart="@drawable/ic_add_black_24dp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/upload_your_picture"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@id/profileIV"
+            app:layout_constraintTop_toTopOf="@id/profileIV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:text="@string/your_picture_should_be_professional_and_clear_head_shot"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/uploadTV"
+            app:layout_constraintTop_toBottomOf="@id/uploadTV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handleClick"
+            type="com.signalDoc_patient.utils.ClickHandler" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileIV"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_margin="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:siRadius="@dimen/_20sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/changeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:lineSpacingExtra="@dimen/_8sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/tap_to_change_picture"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="@id/profileIV"
+                app:layout_constraintStart_toEndOf="@id/profileIV"
+                app:layout_constraintTop_toTopOf="@id/profileIV" />
+
+            <View
+                android:id="@+id/nameV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileIV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:text="@string/first_name"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/nameV"
+                app:layout_constraintTop_toBottomOf="@+id/nameV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/nameProfileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/transparent"
+                android:focusable="false"
+
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_5sp"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toStartOf="@+id/nameTV"
+                app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/nameV"
+                app:layout_constraintTop_toTopOf="@+id/nameTV" />
+
+            <View
+                android:id="@+id/lastnameV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameProfileTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lastnameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:text="@string/last_name"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/nameV"
+                app:layout_constraintTop_toBottomOf="@+id/lastnameV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lastnamePTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_5sp"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toStartOf="@+id/lastnameTV"
+                app:layout_constraintTop_toBottomOf="@+id/lastnameTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/MediumBlue"
+
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/nameV"
+                app:layout_constraintTop_toTopOf="@+id/lastnameTV" />
+
+            <View
+                android:id="@+id/dobV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastnamePTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dobTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:text="@string/date_of_birth"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/nameV"
+                app:layout_constraintTop_toBottomOf="@+id/dobV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/dobPTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_5sp"
+                android:textColor="@color/DarkBluebg"
+
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toStartOf="@+id/dobTV"
+                app:layout_constraintTop_toBottomOf="@+id/dobTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/nameV"
+                app:layout_constraintTop_toTopOf="@+id/dobTV" />
+
+            <View
+                android:id="@+id/addressV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dobPTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/addressTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:text="@string/address"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/nameV"
+                app:layout_constraintTop_toBottomOf="@+id/addressV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/addressPTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_5sp"
+                android:textColor="@color/DarkBluebg"
+
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toStartOf="@+id/addressTV"
+                app:layout_constraintTop_toBottomOf="@+id/addressTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/nameV"
+                app:layout_constraintTop_toTopOf="@+id/addressTV" />
+
+            <View
+                android:id="@+id/countryV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addressPTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:text="@string/country"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/nameV"
+                app:layout_constraintTop_toBottomOf="@+id/countryV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/countryPTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:lineSpacingExtra="@dimen/_5sp"
+                android:textColor="@color/DarkBluebg"
+
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toStartOf="@+id/countryTV"
+                app:layout_constraintTop_toBottomOf="@+id/countryTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/nameV"
+                app:layout_constraintTop_toTopOf="@+id/countryTV" />
+
+            <View
+                android:id="@+id/securityV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/countryPTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/securityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:letterSpacing="0.2"
+                android:lineSpacingExtra="@dimen/_4sp"
+                android:text="@string/security"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="@+id/nameV"
+                app:layout_constraintTop_toBottomOf="@+id/securityV" />
+
+            <View
+                android:id="@+id/numV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/securityTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/numTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:text="@string/phone_number"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/nameV"
+                app:layout_constraintTop_toBottomOf="@+id/numV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/numPTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="phone"
+                android:lineSpacingExtra="@dimen/_5sp"
+                android:maxLength="15"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toStartOf="@+id/numTV"
+                app:layout_constraintTop_toBottomOf="@+id/numTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/edit"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="@id/nameV"
+                app:layout_constraintTop_toTopOf="@+id/numTV" />
+
+            <View
+                android:id="@+id/emailV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numPTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/emailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_10sp"
+                android:text="@string/email"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/nameV"
+                app:layout_constraintTop_toBottomOf="@+id/emailV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/emailPTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="textEmailAddress"
+                android:lineSpacingExtra="@dimen/_5sp"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toStartOf="@+id/emailTV"
+                app:layout_constraintTop_toBottomOf="@+id/emailTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/editMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/edit"
+                android:textColor="@color/MediumBlue"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/nameV"
+                app:layout_constraintTop_toTopOf="@+id/emailTV" />
+
+            <View
+                android:id="@+id/passwordV"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailPTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/passwordTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_5sp"
+                android:text="@string/change_password"
+                android:textColor="@color/SkipColor"
+
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toEndOf="@+id/passIV"
+                app:layout_constraintTop_toBottomOf="@+id/passwordV" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/passIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_password"
+                app:layout_constraintBottom_toBottomOf="@+id/passwordTV"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toTopOf="@id/passwordTV" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrowIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@mipmap/ic_arrow_right"
+                app:layout_constraintEnd_toEndOf="@id/nameV"
+                app:layout_constraintTop_toTopOf="@id/passwordTV" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reSheduleBT"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_35dp"
+                android:background="@drawable/button_blue_shape"
+                android:letterSpacing="0.1"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:text="@string/save_changes"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

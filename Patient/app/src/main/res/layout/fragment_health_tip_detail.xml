@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.HealthTipsDetailFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shutterstock_513427939"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contentHeadTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tips to keep your family safe during the Corona Virus outbreak"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/imgIV"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/docProfileIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_doctor"
+            app:layout_constraintStart_toStartOf="@+id/contentHeadTV"
+            app:layout_constraintTop_toBottomOf="@id/contentHeadTV"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Dr. Blessing Ahmed"
+            android:textSize="@dimen/_12ssp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/GrayLight"
+            app:layout_constraintTop_toBottomOf="@id/docProfileIV"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/docProfileIV"
+            app:layout_constraintEnd_toEndOf="@id/contentHeadTV"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contentTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="#5b5b5b"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:lineSpacingExtra="@dimen/_5ssp"/>
+
+        <View
+            android:id="@+id/viewTwo"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/GrayLight"
+            app:layout_constraintTop_toBottomOf="@id/contentTV"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/docProfileIV"
+            app:layout_constraintEnd_toEndOf="@id/contentHeadTV"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/medicalApprovedTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_view"
+            android:text="10 Medical Professtion Approves"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintTop_toBottomOf="@id/viewTwo"
+            app:layout_constraintStart_toStartOf="@id/viewTwo"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <View
+            android:id="@+id/viewThree"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/GrayLight"
+            app:layout_constraintTop_toBottomOf="@id/medicalApprovedTV"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/docProfileIV"
+            app:layout_constraintEnd_toEndOf="@id/contentHeadTV"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/likeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_like"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="10 Likes"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintTop_toBottomOf="@id/viewThree"
+            app:layout_constraintStart_toStartOf="@id/viewThree"
+            android:layout_marginStart="@dimen/_5ssp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/commentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_comment"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="5 Comments"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintTop_toBottomOf="@id/likeTV"
+            app:layout_constraintStart_toStartOf="@id/viewThree"
+            android:layout_marginStart="@dimen/_5ssp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/commentRV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/viewThree"
+            app:layout_constraintEnd_toEndOf="@id/viewThree"
+            app:layout_constraintTop_toBottomOf="@id/commentTV"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+   </ScrollView>
+</layout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.signalDoc_patient.utils.RubicRegularTextView
+        android:id="@+id/successToastTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/success_toast_bg"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/algae_green"
+        android:textSize="@dimen/_14sp"
+        android:fontFamily="@font/circularstd_book"
+        android:lineSpacingExtra="@dimen/_6sp" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.signalDoc_patient.model.CategoriesData" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/topLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/White">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/light_green_box"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="@dimen/_15sdp"
+            android:singleLine="true"
+            android:text="@{data.title}"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15sp" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/imageIV"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_margin="@dimen/_15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:siRadius="@dimen/_15dp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/drTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:textColor="@color/DarkBluebg"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/nameTV"
+                    app:layout_constraintStart_toEndOf="@+id/imageIV"
+                    app:layout_constraintTop_toTopOf="@id/imageIV" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageIV"
+                    app:layout_constraintStart_toStartOf="@id/drTV"
+                    app:layout_constraintTop_toBottomOf="@+id/drTV" />
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calenderV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageIV"
+                    app:mcv_selectionColor="@color/algae_green" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_16dp"
+                    android:text="@string/available_time_slot"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/calenderV" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/todayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_25dp"
+                    android:drawableStart="@drawable/fill_circle_blue"
+                    android:drawablePadding="@dimen/_7dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/MediumBlue"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/calenderV"
+                    app:layout_constraintTop_toTopOf="@+id/timeTV" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/timeSlotRV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/timeTV"
+                    app:layout_constraintTop_toBottomOf="@+id/timeTV" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bookAppoitmentCV"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_margin="@dimen/_35dp"
+                    android:translationZ="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/timeSlotRV">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/bookAppoitmentTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/LightGrey"
+                        android:gravity="center"
+                        android:text="@string/book_appointment"
+                        android:textAllCaps="true"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14ssp" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/bottom"
+            layout="@layout/consultation_bottom_sheet" />
+
+        <include
+            android:id="@+id/comfirmBottom"
+            layout="@layout/confirm_bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

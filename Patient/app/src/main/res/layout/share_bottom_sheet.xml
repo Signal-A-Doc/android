@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/addBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/light_voilet_upper_curve"
+        android:clickable="true"
+        android:translationZ="@android:dimen/app_icon_size"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shareTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="share"
+            android:fontFamily="@font/circularstd_book"
+            android:textAllCaps="true"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@mipmap/ic_close"
+            app:layout_constraintBottom_toBottomOf="@id/shareTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shareTV" />
+
+        <View
+            android:id="@+id/topV"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/GrayLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/shareTV"
+            app:layout_constraintTop_toBottomOf="@id/shareTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/photosTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:text="@string/photos"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15sp"
+
+            app:layout_constraintStart_toEndOf="@id/photoIV"
+            app:layout_constraintTop_toBottomOf="@id/topV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/photoIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@mipmap/ic_photos"
+            app:layout_constraintStart_toStartOf="@id/topV"
+            app:layout_constraintTop_toBottomOf="@id/topV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sharePTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineHeight="@dimen/_14sp"
+            android:text="@string/share_photos"
+            android:fontFamily="@font/circularstd_book"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="@id/photosTV"
+            app:layout_constraintTop_toBottomOf="@id/photosTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@mipmap/ic_arrow_right_blue"
+            app:layout_constraintBottom_toBottomOf="@id/sharePTV"
+            app:layout_constraintEnd_toEndOf="@id/topV"
+            app:layout_constraintTop_toTopOf="@id/photosTV" />
+
+        <View
+            android:id="@+id/midV"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/GrayLight"
+            app:layout_constraintEnd_toEndOf="@id/topV"
+            app:layout_constraintStart_toStartOf="@id/topV"
+            app:layout_constraintTop_toBottomOf="@id/photoIV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/videosTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:text="@string/videos"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15sp"
+
+            app:layout_constraintStart_toEndOf="@+id/videoIV"
+            app:layout_constraintTop_toBottomOf="@id/midV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/videoIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@mipmap/ic_videos"
+            app:layout_constraintStart_toStartOf="@id/midV"
+            app:layout_constraintTop_toBottomOf="@id/midV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shareVTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_book"
+            android:text="@string/share_videos"
+            android:textSize="@dimen/_10sp"
+            app:fontFamily="@font/circularstd_book"
+            app:layout_constraintStart_toStartOf="@id/photosTV"
+            app:layout_constraintTop_toBottomOf="@id/videosTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@mipmap/ic_arrow_right_blue"
+            app:layout_constraintBottom_toBottomOf="@id/shareVTV"
+            app:layout_constraintEnd_toEndOf="@id/topV"
+            app:layout_constraintTop_toTopOf="@id/videosTV" />
+
+        <View
+            android:id="@+id/bottomV"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/GrayLight"
+            app:layout_constraintEnd_toEndOf="@id/topV"
+            app:layout_constraintStart_toStartOf="@id/topV"
+            app:layout_constraintTop_toBottomOf="@id/videoIV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fileTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:text="@string/file"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toEndOf="@id/fileIV"
+            app:layout_constraintTop_toBottomOf="@id/bottomV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fileIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@mipmap/ic_videos"
+            app:layout_constraintStart_toStartOf="@id/bottomV"
+            app:layout_constraintTop_toBottomOf="@id/bottomV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shareFTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:text="@string/share_files"
+            android:textSize="@dimen/_10sp"
+            android:fontFamily="@font/circularstd_book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/photosTV"
+            app:layout_constraintTop_toBottomOf="@id/fileTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@mipmap/ic_arrow_right_blue"
+            app:layout_constraintBottom_toBottomOf="@id/shareFTV"
+            app:layout_constraintEnd_toEndOf="@id/topV"
+            app:layout_constraintTop_toTopOf="@id/fileTV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

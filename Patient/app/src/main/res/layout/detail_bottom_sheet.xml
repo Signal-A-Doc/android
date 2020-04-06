@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:background="@drawable/bottom_sheet"
+        android:translationZ="@android:dimen/app_icon_size"
+        android:id="@+id/detailSheet"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/detailsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:text="@string/detail"
+            android:textAllCaps="true"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/cutIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@mipmap/ic_close"
+            app:layout_constraintBottom_toBottomOf="@id/detailsTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailsTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/callIconIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:src="@mipmap/ic_user_b"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsTV"  />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/userIconIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@mipmap/ic_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/docNameTV"
+            app:layout_constraintBottom_toBottomOf="@+id/docNameTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/locIconIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@mipmap/ic_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addressTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/consulationTypeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Face to Face Consulation"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintBottom_toBottomOf="@id/callIconIV"
+            app:layout_constraintStart_toEndOf="@id/callIconIV"
+            app:layout_constraintTop_toTopOf="@+id/callIconIV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:text="Tuesday,Feb 18,1:30 PM"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="@id/consulationTypeTV"
+            app:layout_constraintTop_toBottomOf="@+id/consulationTypeTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/stateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Confirmed"
+            android:textSize="@dimen/_11ssp"
+
+            android:textAllCaps="true"
+            android:textColor="@color/MediumBlue"
+            app:layout_constraintStart_toEndOf="@id/dateTV"
+            app:layout_constraintTop_toBottomOf="@id/consulationTypeTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/docNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Dr. Susan peters"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_14ssp"
+
+            app:layout_constraintStart_toStartOf="@id/consulationTypeTV"
+            app:layout_constraintTop_toBottomOf="@id/dateTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addressTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Blue Health care,43 Ayobami faji street"
+            android:textColor="@color/DarkBluebg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+
+            app:layout_constraintStart_toStartOf="@+id/docNameTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/docNameTV"
+       />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/moreDetailTV"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/view_more_details"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_margin="@dimen/_35dp"
+            android:translationZ="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/MediumBlue"
+            app:cardCornerRadius="@dimen/_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/moreDetailTV">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/reSheduleBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/MediumBlue"
+                android:text="@string/reschedule"
+                android:textAllCaps="true"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_14ssp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_30sdp"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardCV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+
+

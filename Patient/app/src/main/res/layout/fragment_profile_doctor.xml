@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handleClick"
+            type="com.signalDoc_patient.utils.ClickHandler" />
+
+        <variable
+            name="data"
+            type="com.signalDoc_patient.model.ProfileData" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/imageIV"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:siRadius="@dimen/_15dp" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/likeCB"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:button="@drawable/fav_doctor_drawable"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                app:layout_constraintBottom_toBottomOf="@id/imageIV"
+                app:layout_constraintEnd_toEndOf="@id/imageIV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/drTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_4sp"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@{@string/dr+` `+ data.fullName}"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cardCV"
+                app:layout_constraintStart_toStartOf="@+id/cardCV"
+                app:layout_constraintTop_toBottomOf="@+id/imageIV" />
+
+            <com.signalDoc_patient.utils.RubicRegularTextView
+                android:id="@+id/nameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintEnd_toEndOf="@+id/drTV"
+                app:layout_constraintStart_toStartOf="@+id/drTV"
+                app:layout_constraintTop_toBottomOf="@+id/drTV" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingRB"
+                style="@style/RatingB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:numStars="5"
+                android:rating="4"
+
+                android:theme="@style/RatingB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintBottom_toBottomOf="@id/ratingRB"
+                app:layout_constraintStart_toEndOf="@id/ratingRB"
+                app:layout_constraintTop_toTopOf="@id/ratingRB" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/callIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:src="@mipmap/ic_call_big"
+                app:layout_constraintEnd_toStartOf="@+id/messageIV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingRB"
+                app:siRadius="@dimen/_5dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/messageIV"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:src="@mipmap/ic_message_big"
+                app:layout_constraintEnd_toStartOf="@id/vCallIV"
+                app:layout_constraintStart_toEndOf="@id/callIV"
+                app:layout_constraintTop_toTopOf="@+id/callIV"
+                app:siRadius="@dimen/_5dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/vCallIV"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:src="@mipmap/ic_video_big"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/messageIV"
+                app:layout_constraintTop_toTopOf="@+id/messageIV"
+                app:siRadius="@dimen/_5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCV"
+
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_margin="@dimen/_35dp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:translationZ="@dimen/_5sdp"
+                app:cardBackgroundColor="@color/MediumBlue"
+                app:cardCornerRadius="@dimen/_5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/messageIV">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_blue_shape"
+                    android:drawableStart="@mipmap/ic_calendar_white"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="@string/view_availability"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/_18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/aboutTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+
+                android:text="@string/about_me"
+                app:layout_constraintStart_toStartOf="@+id/cardCV"
+                app:layout_constraintTop_toBottomOf="@+id/cardCV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/aboutDocTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_6sp"
+                android:text="@{data.workInformation.profileSummary}"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintEnd_toEndOf="@id/cardCV"
+                app:layout_constraintStart_toStartOf="@id/cardCV"
+                app:layout_constraintTop_toBottomOf="@id/aboutTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/placeTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:lineSpacingExtra="@dimen/_6sp"
+                android:text="@string/current_place_of_work"
+                android:textAllCaps="true"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintEnd_toEndOf="@id/cardCV"
+                app:layout_constraintStart_toStartOf="@id/cardCV"
+                app:layout_constraintTop_toBottomOf="@id/aboutDocTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/placeOfWorkTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:lineSpacingExtra="@dimen/_6sp"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintEnd_toEndOf="@id/cardCV"
+                app:layout_constraintStart_toStartOf="@id/cardCV"
+                app:layout_constraintTop_toBottomOf="@id/placeTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/languageSpokenTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:lineSpacingExtra="@dimen/_6sp"
+                android:text="@string/language_spoken"
+                android:textAllCaps="true"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintEnd_toEndOf="@id/cardCV"
+                app:layout_constraintStart_toStartOf="@id/cardCV"
+                app:layout_constraintTop_toBottomOf="@id/placeOfWorkTV" />
+
+
+            <RelativeLayout
+                android:id="@+id/languageSpokenRL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/languageSpokenTV"
+                app:layout_constraintStart_toStartOf="@+id/languageSpokenTV"
+                app:layout_constraintTop_toBottomOf="@+id/languageSpokenTV">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/errorSetTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:lineSpacingExtra="@dimen/_6sp"
+                    android:text="@string/not_set"
+                    android:textColor="@color/SkipColor"
+                    android:textSize="@dimen/_13sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/languageSpokenRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewV"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25dp"
+                android:layout_marginBottom="@dimen/_30dp"
+                android:background="@drawable/stroke_blue_bt"
+                android:minHeight="@dimen/_50sdp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/cardCV"
+                app:layout_constraintStart_toStartOf="@id/aboutDocTV"
+                app:layout_constraintTop_toBottomOf="@id/languageSpokenRL" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/ic_rating_filled_b"
+                android:drawablePadding="@dimen/_7sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_6sp"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="@id/viewV"
+                app:layout_constraintEnd_toEndOf="@id/viewV"
+                app:layout_constraintStart_toStartOf="@+id/viewV"
+                app:layout_constraintTop_toTopOf="@+id/viewV" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

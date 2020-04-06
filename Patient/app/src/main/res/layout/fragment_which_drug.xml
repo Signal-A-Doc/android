@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/whichDrugTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_8sp"
+            android:text="@string/which_drug_allergie"
+            android:textColor="@color/Neon"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pleaseTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:text="@string/please_specify_the_name_of_each_drug"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="@id/whichDrugTV"
+            app:layout_constraintTop_toBottomOf="@id/whichDrugTV" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/allergyOneET"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/circularstd_book"
+            android:hint="@string/drug_allergy_1"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pleaseTV" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/allergyTwoET"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/circularstd_book"
+            android:hint="@string/drug_allergy_2"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="@+id/allergyOneET"
+            app:layout_constraintStart_toStartOf="@+id/allergyOneET"
+            app:layout_constraintTop_toBottomOf="@id/allergyOneET" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/allergyThreeET"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Drug allergy 3"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="@+id/allergyTwoET"
+            app:layout_constraintStart_toStartOf="@+id/allergyTwoET"
+            app:layout_constraintTop_toBottomOf="@id/allergyTwoET" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addAnotherTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:text="@string/add_another_drug_allergy"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="@id/allergyThreeET"
+            app:layout_constraintStart_toStartOf="@id/allergyThreeET"
+            app:layout_constraintTop_toBottomOf="@id/allergyThreeET" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/saveCV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addAnotherTV">
+
+            <com.signalDoc_patient.utils.CustomButton
+                android:id="@+id/saveBT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_blue_shape"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:text="@string/save"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_15sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

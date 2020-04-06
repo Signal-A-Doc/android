@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tabCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:cardElevation="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/White"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/Neon"
+                app:tabTextAppearance="@style/TabTextAppearance"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/BlueLight">
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/myDetailTI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/my_details"
+                     />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/medicalTI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/health_profile" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabCard" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

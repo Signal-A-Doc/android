@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_call_bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/black_upper_curve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/videoIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@mipmap/ic_documents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/consultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Video Consultation"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/White"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableStart="@mipmap/ic_video_chat"
+        app:layout_constraintStart_toEndOf="@id/videoIV"
+        app:layout_constraintTop_toTopOf="@id/videoIV"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/docNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Video Consultation"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/White"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@id/videoIV"
+        app:layout_constraintTop_toBottomOf="@id/consultTV"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calling..."
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/White"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@id/videoIV"
+        app:layout_constraintTop_toBottomOf="@id/docNameTV"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/vMuteIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@mipmap/ic_video_off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/muteIV"
+        app:layout_constraintBottom_toBottomOf="@id/endIV"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/muteIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@mipmap/ic_mute"
+        app:layout_constraintStart_toEndOf="@+id/vMuteIV"
+        app:layout_constraintEnd_toStartOf="@+id/speakerIV"
+        app:layout_constraintBottom_toBottomOf="@id/endIV"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/speakerIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@mipmap/ic_speaker"
+        app:layout_constraintBottom_toBottomOf="@id/endIV"
+        app:layout_constraintStart_toEndOf="@+id/muteIV"
+        app:layout_constraintEnd_toStartOf="@+id/endIV"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/endIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@mipmap/ic_documents"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_30sdp"
+
+        app:layout_constraintStart_toEndOf="@+id/speakerIV"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

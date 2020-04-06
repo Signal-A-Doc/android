@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/light_green_box">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/profileRIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:src="@mipmap/ic_profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:siRadius="@dimen/_8sdp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/consultationTypeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:drawableStart="@mipmap/ic_video_s"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="Video Consultation"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@id/profileRIV"
+            app:layout_constraintTop_toTopOf="@+id/profileRIV"
+            app:layout_constraintBottom_toTopOf="@+id/nameTV"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jacob adebayo"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/consultationTypeTV"
+            app:layout_constraintTop_toBottomOf="@+id/consultationTypeTV"
+            app:layout_constraintBottom_toBottomOf="@+id/profileRIV"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

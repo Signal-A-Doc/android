@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/anyMedicalTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/circularstd_bold"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:text="@string/any_medical_condition"
+            android:textColor="@color/Neon"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notSureTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:text="@string/not_sure_choose_yes_to_see_list_of_confitions_and_diseases"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="@id/anyMedicalTV"
+            app:layout_constraintTop_toBottomOf="@id/anyMedicalTV" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yesCV"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintEnd_toStartOf="@id/noCV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notSureTV">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_6sp"
+                android:text="@string/yes"
+                android:textAllCaps="true"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_15sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/noCV"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/yesCV"
+            app:layout_constraintTop_toTopOf="@+id/yesCV">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_6sp"
+                android:text="@string/no"
+                android:textAllCaps="true"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_15sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

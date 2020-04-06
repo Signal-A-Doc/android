@@ -1,0 +1,114 @@
+/*
+ * @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+ * @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+ * All Rights Reserved.
+ * Proprietary and confidential :  All information contained herein is, and remains
+ * the property of ToXSL Technologies Pvt. Ltd. and its partners.
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ *
+ */
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    dataBinding {
+        enabled = true
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+    lintOptions {
+        checkReleaseBuilds true
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "com.signalDoc_patient"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        release {
+            storeFile file("key.jks")
+            storePassword "com.signalDoc_patient"
+            keyAlias "com.signalDoc_patient"
+            keyPassword "com.signalDoc_patient"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def project = "com.signalDoc_patient"
+            def separator = "_"
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def versionName = variant.versionName
+            def versionCode = variant.versionCode
+            def date = new Date()
+            def formattedDate = date.format('yyyy_MM_dd')
+            if (variant.buildType.name == "release") {
+                def newApkName = project + separator + "v" + versionName + separator + versionCode + separator + buildType + separator + formattedDate + ".apk"
+                output.outputFileName = newApkName
+            }
+            if (variant.buildType.name == "debug") {
+                def newApkName = project + separator + "v" + versionName + separator + versionCode + separator + buildType + ".apk"
+                output.outputFileName = newApkName
+            }
+        }
+    }
+}
+
+ext {
+    playServicesVersion = '17.0.0'
+    playServicesAuthVersion = '17.0.0'
+    firebaseVersion = '20.1.2'
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "com.google.firebase:firebase-messaging:$firebaseVersion"
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "com.google.android.gms:play-services-auth:$playServicesAuthVersion"
+    implementation "com.google.android.gms:play-services-location:$playServicesVersion"
+    implementation 'com.google.android.libraries.places:places:2.2.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation project(':image-picker-lib')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'cz.msebera.android:httpclient:4.5.8'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3@aar'
+    implementation project(path: ':sync-manager-android-retrofit-lib')
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.github.warkiz.tickseekbar:tickseekbar:0.1.4'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.2'
+    implementation 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
+
+    implementation 'com.hbb20:ccp:2.3.7'
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
+    implementation 'co.paystack.android:paystack:3.0.10'
+}

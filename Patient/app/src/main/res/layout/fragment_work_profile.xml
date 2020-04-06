@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handleClick"
+            type="com.signalDoc_patient.utils.ClickHandler" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dark_blue_bg">
+
+            <View
+                android:id="@+id/whiteView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/white_upper_curve_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/workProfileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/circularstd_black"
+                android:letterSpacing="0.1"
+                android:lineSpacingExtra="5.3sp"
+                android:text="@string/work_profile"
+                android:textAllCaps="true"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="@id/whiteView"
+                app:layout_constraintTop_toTopOf="@id/whiteView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/letsSetTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:text="@string/lets_set_you_up_so_you_can_start_helping_out"
+                android:textColor="@color/Gray"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="@+id/workProfileTV"
+                app:layout_constraintStart_toStartOf="@id/workProfileTV"
+                app:layout_constraintTop_toBottomOf="@+id/workProfileTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pageOneCircle"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/circle_blue_shape"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/White"
+                app:layout_constraintBottom_toBottomOf="@+id/letsSetTV"
+                app:layout_constraintEnd_toStartOf="@id/pageTwoCircle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pageTwoCircle"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/circle_blue_shape"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/White"
+                app:layout_constraintBottom_toBottomOf="@+id/letsSetTV"
+                app:layout_constraintEnd_toStartOf="@id/pageThreeCircle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pageThreeCircle"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/circle_blue_shape"
+                android:gravity="center"
+
+                android:text="3"
+                android:textColor="@color/White"
+                app:layout_constraintBottom_toBottomOf="@+id/letsSetTV"
+                app:layout_constraintEnd_toStartOf="@+id/pagefourCircle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pagefourCircle"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/circle_grey"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/White"
+                app:layout_constraintBottom_toBottomOf="@+id/letsSetTV"
+                app:layout_constraintEnd_toEndOf="@id/statusET" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/statusET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/circularstd_book"
+                android:hint="@string/professional_status"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+                app:layout_constraintTop_toBottomOf="@+id/letsSetTV" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/statusET"
+                app:layout_constraintEnd_toEndOf="@id/statusET"
+                app:layout_constraintTop_toTopOf="@+id/statusET" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:text="@string/professional_indemnity"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/noTV"
+                app:layout_constraintStart_toStartOf="@+id/statusET"
+                app:layout_constraintTop_toTopOf="@+id/noTV" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/blue_border_box"
+                android:checked="true"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:text="@string/yes"
+                android:textSize="@dimen/_11sp"
+                app:layout_constraintEnd_toStartOf="@+id/noTV"
+                app:layout_constraintTop_toTopOf="@+id/noTV" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/noTV"
+
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/grey_border_box"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:text="@string/no"
+                android:textSize="@dimen/_11sp"
+                app:layout_constraintEnd_toEndOf="@id/statusET"
+                app:layout_constraintTop_toBottomOf="@+id/statusET" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/uploadTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/grey_border_box"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:padding="@dimen/_10ssp"
+                android:text="@string/upload_p_i_certificate"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="@id/statusET"
+                app:layout_constraintStart_toStartOf="@+id/statusET"
+                app:layout_constraintTop_toBottomOf="@+id/noTV" />
+
+
+            <LinearLayout
+                android:id="@+id/certificateLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/uploadTV"
+                app:layout_constraintTop_toBottomOf="@id/uploadTV">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/certificatePiIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_doctor" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/removePiTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:drawableStart="@mipmap/ic_close"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/circularstd_book"
+                    android:lineSpacingExtra="@dimen/_2sp"
+                    android:text="Remove"
+                    android:textSize="@dimen/_12sp" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/folioNumberET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/circularstd_book"
+                android:hint="MDCN Folio Number"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+                app:layout_constraintTop_toBottomOf="@+id/certificateLL" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/uploadAnnualTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/grey_border_box"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:padding="@dimen/_10ssp"
+                android:text="@string/upload_annual_practicing_license"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="@id/statusET"
+                app:layout_constraintStart_toStartOf="@+id/statusET"
+                app:layout_constraintTop_toBottomOf="@+id/folioNumberET" />
+
+
+            <LinearLayout
+                android:id="@+id/certificateAnnualLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/uploadAnnualTV"
+                app:layout_constraintTop_toBottomOf="@id/uploadAnnualTV">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/certificateAnnualIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_doctor" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/removeAnnualTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:drawableStart="@mipmap/ic_close"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/circularstd_book"
+                    android:lineSpacingExtra="@dimen/_2sp"
+                    android:text="@string/remove"
+                    android:textSize="@dimen/_12sp" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/regNoET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/circularstd_book"
+                android:hint="@string/registration_number"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+                app:layout_constraintTop_toBottomOf="@+id/certificateAnnualLL" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/issueDateTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/edittext_bg"
+                android:drawableStart="@mipmap/ic_appointments_d"
+                android:gravity="center"
+                android:hint="Issue Date"
+                android:padding="@dimen/_10sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toStartOf="@+id/expiryDateTV"
+                app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+                app:layout_constraintTop_toBottomOf="@+id/regNoET" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/expiryDateTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/edittext_bg"
+                android:drawableStart="@mipmap/ic_appointments_d"
+                android:gravity="center"
+                android:hint="Expiry Date"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_10sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="@+id/regNoET"
+                app:layout_constraintStart_toEndOf="@+id/issueDateTV"
+                app:layout_constraintTop_toBottomOf="@+id/regNoET" />
+
+
+            <LinearLayout
+                android:id="@+id/ChildCareLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/edittext_bg"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/expiryDateTV"
+                app:layout_constraintStart_toStartOf="@id/issueDateTV"
+                app:layout_constraintTop_toBottomOf="@id/issueDateTV">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/circularstd_book"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:text="@string/areas_of_specialization"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@id/careET"
+                    app:layout_constraintTop_toTopOf="@id/careET" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/careET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableEnd="@mipmap/ic_search_blue"
+                    android:fontFamily="@font/circularstd_book"
+                    android:gravity="bottom"
+                    android:hint="@string/child_care"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lineSpacingExtra="@dimen/_2sp"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+                    app:layout_constraintTop_toBottomOf="@+id/expiryDateTV" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/specificationRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="@id/ChildCareLL"
+                app:layout_constraintStart_toStartOf="@id/ChildCareLL"
+                app:layout_constraintTop_toBottomOf="@id/ChildCareLL"
+                app:spanCount="3" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/LightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/specificationRV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/summaryET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/edittext_bg"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="top"
+                android:hint="@string/profile_summary"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:minHeight="@dimen/_100sdp"
+                android:padding="@dimen/_7sdp"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buttonCV"
+
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/button_blue_shape"
+                android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                app:cardElevation="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="@id/summaryET"
+                app:layout_constraintStart_toStartOf="@id/summaryET"
+                app:layout_constraintTop_toBottomOf="@id/summaryET">
+
+                <com.signalDoc_patient.utils.CustomButton
+                    android:id="@+id/loginBT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_blue_shape"
+                    android:letterSpacing="0.1"
+                    android:lineSpacingExtra="@dimen/_2sp"
+                    android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+                    android:text="@string/continue_"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/_16sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/byCreatingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:text="@string/by_creating_an_account_you_agree_to_our"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintEnd_toEndOf="@id/buttonCV"
+                app:layout_constraintStart_toStartOf="@id/buttonCV"
+                app:layout_constraintTop_toBottomOf="@id/buttonCV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/termsOfTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintEnd_toEndOf="@id/byCreatingTV"
+                app:layout_constraintStart_toStartOf="@id/byCreatingTV"
+                app:layout_constraintTop_toBottomOf="@id/byCreatingTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/alreadyHaveTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_2sp"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/whiteView"
+                app:layout_constraintStart_toStartOf="@id/whiteView"
+                app:layout_constraintTop_toBottomOf="@+id/termsOfTV" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

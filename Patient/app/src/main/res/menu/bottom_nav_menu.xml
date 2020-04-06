@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeM"
+        android:icon="@mipmap/ic_home_unselected"
+        android:title="@string/home"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/appointmentsM"
+        android:icon="@mipmap/ic_app_unselected"
+        android:title="@string/appointments"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/professionalM"
+        android:icon="@mipmap/ic_prof_unselected"
+        android:title="@string/professionals"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/accountM"
+        android:icon="@mipmap/ic_profile_unselected"
+        android:title="@string/account"
+        app:showAsAction="ifRoom|withText"/>
+
+
+
+</menu>

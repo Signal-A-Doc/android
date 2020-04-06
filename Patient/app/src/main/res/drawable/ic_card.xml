@@ -1,0 +1,49 @@
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="50.752dp"
+    android:height="42.321dp"
+    android:viewportWidth="50.752"
+    android:viewportHeight="42.321">
+  <path
+      android:pathData="M8.082,6.838a2.5,2.5 0,0 1,2.5 -2.5L49.514,4.338L49.514,3.738a2.5,2.5 0,0 0,-2.5 -2.5L7.482,1.238a2.5,2.5 0,0 0,-2.5 2.5v15.2A13.123,13.123 0,0 1,8.082 17.121ZM8.082,6.838"
+      android:fillColor="#d4e1f4"/>
+  <path
+      android:pathData="M47.013,0L7.485,0A3.744,3.744 0,0 0,3.744 3.74L3.744,20.305h1.238L4.982,3.74a2.5,2.5 0,0 1,2.5 -2.5L47.013,1.24a2.5,2.5 0,0 1,2.5 2.5L49.513,26.405a2.5,2.5 0,0 1,-2.5 2.5L25.581,28.905v1.238L47.013,30.143a3.744,3.744 0,0 0,3.739 -3.74L50.752,3.74A3.744,3.744 0,0 0,47.013 0ZM47.013,0"
+      android:fillColor="#08307c"/>
+  <path
+      android:pathData="M37.75,26.074a4.634,4.634 0,1 0,0 -8.352,4.634 4.634,0 1,0 0,8.352ZM39.757,18.502a3.4,3.4 0,1 1,-0.772 6.7,4.623 4.623,0 0,0 0,-6.612 3.389,3.389 0,0 1,0.772 -0.091ZM36.357,21.902a3.393,3.393 0,0 1,1.389 -2.737,3.391 3.391,0 0,1 0,5.474 3.393,3.393 0,0 1,-1.389 -2.737ZM32.342,21.902a3.394,3.394 0,0 1,4.168 -3.306,4.624 4.624,0 0,0 0,6.612 3.394,3.394 0,0 1,-4.168 -3.306ZM32.342,21.902"
+      android:fillColor="#08307c"/>
+  <path
+      android:pathData="M24.951,5.659L8.437,5.659a0.619,0.619 0,0 0,0 1.238L24.951,6.897a0.619,0.619 0,0 0,0 -1.238ZM24.951,5.659"
+      android:fillColor="#08307c"/>
+  <path
+      android:pathData="M28.982,6.896a0.619,0.619 0,1 0,0 -1.238h-1.788a0.619,0.619 0,1 0,0 1.238ZM28.982,6.896"
+      android:fillColor="#08307c"/>
+  <path
+      android:pathData="M8.436,10.018h0.771a0.619,0.619 0,0 0,0 -1.238L8.436,8.78a0.619,0.619 0,0 0,0 1.238ZM8.436,10.018"
+      android:fillColor="#08307c"/>
+  <path
+      android:pathData="M11.518,8.78a0.619,0.619 0,1 0,0 1.238h10.311a0.619,0.619 0,1 0,0 -1.238ZM11.518,8.78"
+      android:fillColor="#08307c"/>
+  <path
+      android:pathData="M23.454,9.399a0.619,0.619 0,0 0,0.619 0.619h4.909a0.619,0.619 0,1 0,0 -1.238h-4.909A0.619,0.619 0,0 0,23.454 9.399ZM23.454,9.399"
+      android:fillColor="#08307c"/>
+  <path
+      android:pathData="M13.1,16.118a13.1,13.1 0,1 0,13.1 13.1A13.1,13.1 0,0 0,13.1 16.118ZM13.1,41.083a11.864,11.864 0,1 1,11.864 -11.864A11.864,11.864 0,0 1,13.1 41.083ZM13.1,41.083"
+      android:fillColor="#64e486"/>
+  <path
+      android:pathData="M13.1,23.11v7h6.714"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="#64e486"
+      android:strokeLineCap="round"/>
+</vector>

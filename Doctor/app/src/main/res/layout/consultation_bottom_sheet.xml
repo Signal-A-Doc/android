@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consultationBottomCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet"
+        android:translationZ="@android:dimen/app_icon_size"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        android:clickable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:paddingBottom="@dimen/_10sdp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/consultationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/consultation"
+            android:textAllCaps="true"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/crossIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@mipmap/ic_cross_grey"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/consultationTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/consultationTV" />
+
+
+
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/callTV"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Call Consultation"
+           android:textSize="@dimen/_15ssp"
+           android:textColor="@color/DarkBluebg"
+           android:drawableStart="@mipmap/ic_documents"
+           android:gravity="center"
+           android:drawablePadding="@dimen/_30sdp"
+           app:layout_constraintStart_toStartOf="@id/consultationTV"
+           app:layout_constraintTop_toBottomOf="@id/consultationTV"
+           android:layout_marginTop="@dimen/_20sdp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/messageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_consultation"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15ssp"
+            android:drawableStart="@mipmap/ic_documents"
+            app:layout_constraintTop_toBottomOf="@id/callTV"
+            app:layout_constraintStart_toStartOf="@+id/callTV"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:drawablePadding="@dimen/_30sdp"
+             />
+<!--        -->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/videoCallTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/video_call_consultation"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintTop_toBottomOf="@id/messageTV"
+            app:layout_constraintStart_toStartOf="@+id/messageTV"
+            android:drawableStart="@mipmap/ic_documents"
+            android:gravity="center"
+            android:drawablePadding="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+<!--      -->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/faceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/face_to_face_consulation"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="@id/videoCallTV"
+            app:layout_constraintTop_toBottomOf="@+id/videoCallTV"
+            android:drawableStart="@mipmap/ic_documents"
+            android:gravity="center"
+            android:drawablePadding="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

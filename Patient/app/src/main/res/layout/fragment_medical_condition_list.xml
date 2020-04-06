@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/doYouTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/circularstd_bold"
+            android:lineSpacingExtra="@dimen/_8sp"
+            android:text="@string/which_medical_condition"
+            android:textColor="@color/Neon"
+            android:textSize="@dimen/_22sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dummyTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doYouTV"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:text="@string/please_include_past_and_current_medical_condition"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_15sp" />
+
+        <View
+            android:id="@+id/viewV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_below="@+id/dummyTV"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@color/LightGrey" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/addAnotherTV"
+            android:layout_below="@+id/viewV"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addAnotherTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/contineBT"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:text="@string/add_another_medication"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_15sp" />
+
+        <com.signalDoc_patient.utils.CustomButton
+            android:id="@+id/contineBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/button_blue_shape"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/continue_"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_15sp" />
+    </RelativeLayout>
+</layout>

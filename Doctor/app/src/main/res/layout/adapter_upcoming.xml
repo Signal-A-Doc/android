@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_190sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/profileIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@mipmap/mask_group_43"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/circularstd_book"
+                 android:lineSpacingExtra="@dimen/_4sp"
+                android:text="Ameh Ahmed"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/profileIV"
+                app:layout_constraintTop_toTopOf="@id/profileIV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="Male | 27 years"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/nameTV"
+                app:layout_constraintTop_toBottomOf="@id/nameTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/counsultationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="2.7sp"
+                android:text="@string/consultation"
+                app:textAllCaps="true"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/profileIV"
+                app:layout_constraintTop_toBottomOf="@id/profileIV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/videoConsultTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawableStart="@mipmap/ic_video_small"
+                android:drawablePadding="@dimen/_10sp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="Video consultation"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/counsultationTV"
+                app:layout_constraintTop_toBottomOf="@id/counsultationTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/healthTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="@string/health_complaints"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/videoConsultTV"
+                app:layout_constraintTop_toBottomOf="@id/videoConsultTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/allergicTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="Allergic Reaction"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/healthTV"
+                app:layout_constraintTop_toBottomOf="@id/healthTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/waitTimeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="@string/wait_time"
+                android:textColor="@color/SkipColor"
+                android:textSize="@dimen/_10sp"
+                app:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="@id/videoConsultTV"
+                app:layout_constraintTop_toBottomOf="@id/allergicTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/circularstd_book"
+                android:lineSpacingExtra="@dimen/_3sp"
+                android:text="02:25 min"
+                android:textColor="@color/DarkBluebg"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@id/healthTV"
+                app:layout_constraintTop_toBottomOf="@id/waitTimeTV" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/signupTV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:cardElevation="@dimen/_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeTV">
+
+                <com.signalDoc_doctor.utils.CustomButton
+                    android:id="@+id/signupBT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/corner_blue_bt"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/select"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/_10sp"
+                    android:letterSpacing="0.1"
+                    android:lineSpacingExtra="@dimen/_2sp"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handleClick"
+            type="com.signalDoc_doctor.utils.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backBlue">
+
+
+        <View
+            android:id="@+id/whiteView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/white_upper_curve_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bankDetailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/circularstd_black"
+            android:letterSpacing="0.1"
+            android:lineSpacingExtra="5.3sp"
+            android:text="@string/bank_details"
+            android:textAllCaps="true"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_22sp"
+            app:fontFamily="@font/circularstd_black"
+            app:layout_constraintStart_toStartOf="@id/whiteView"
+            app:layout_constraintTop_toTopOf="@id/whiteView" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/letsSetTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:text="@string/lets_set_you_up_so_you_can_start_helping_out"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="@+id/bankDetailTV"
+            app:layout_constraintStart_toStartOf="@id/bankDetailTV"
+            app:layout_constraintTop_toBottomOf="@+id/bankDetailTV" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pageOneCircle"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/circle_blue_shape"
+            android:gravity="center"
+            android:text="@string/_1"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="@+id/letsSetTV"
+            app:layout_constraintEnd_toStartOf="@id/pageTwoCircle" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pageTwoCircle"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/circle_blue_shape"
+            android:gravity="center"
+            android:text="@string/_2"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="@+id/letsSetTV"
+            app:layout_constraintEnd_toStartOf="@id/pageThreeCircle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pageThreeCircle"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/circle_blue_shape"
+            android:gravity="center"
+
+            android:text="@string/_3"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="@+id/letsSetTV"
+            app:layout_constraintEnd_toStartOf="@+id/pagefourCircle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pagefourCircle"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/circle_blue_shape"
+            android:gravity="center"
+            android:text="@string/_4"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="@+id/letsSetTV"
+            app:layout_constraintEnd_toEndOf="@id/bankET" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/bankET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/circularstd_book"
+            android:hint="@string/bank"
+
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+            app:layout_constraintTop_toBottomOf="@+id/letsSetTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bankET"
+            app:layout_constraintEnd_toEndOf="@id/bankET"
+            app:layout_constraintTop_toTopOf="@+id/bankET" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bankET"
+            app:layout_constraintEnd_toEndOf="@id/bankET"
+            app:layout_constraintTop_toTopOf="@+id/bankET" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/bankNameET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/circularstd_book"
+            android:hint="@string/account_name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+            app:layout_constraintTop_toBottomOf="@+id/bankET" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/accountNumET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/circularstd_book"
+            android:hint="@string/account_number"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:padding="@dimen/_10sp"
+            android:singleLine="true"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/letsSetTV"
+            app:layout_constraintTop_toBottomOf="@+id/bankNameET" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/termsCB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_3sp"
+            android:text="@string/i_agree_to_the_contract_applicable_to_healthcare_pprofessionals_providing_sevices_on_the_platform"
+            android:textColor="@color/TermsColor"
+            android:textSize="@dimen/_8sp"
+            app:layout_constraintEnd_toEndOf="@id/accountNumET"
+            app:layout_constraintStart_toStartOf="@id/accountNumET"
+            app:layout_constraintTop_toBottomOf="@id/accountNumET" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginBT"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/button_blue_shape"
+            android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+            android:text="@string/continue_"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@id/termsCB"
+            app:layout_constraintStart_toStartOf="@id/termsCB"
+            app:layout_constraintTop_toBottomOf="@id/termsCB" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/byCreatingTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:text="@string/by_creating_an_account_you_agree_to_our"
+            android:textColor="@color/TermsColor"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintEnd_toEndOf="@id/loginBT"
+            app:layout_constraintStart_toStartOf="@id/loginBT"
+            app:layout_constraintTop_toBottomOf="@id/loginBT" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/termsOfTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_4sp"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintEnd_toEndOf="@id/byCreatingTV"
+            app:layout_constraintStart_toStartOf="@id/byCreatingTV"
+            app:layout_constraintTop_toBottomOf="@id/byCreatingTV" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/alreadyHaveTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:text="@string/already_have_an_account_sign_in"
+            android:textColor="@color/TermsColor"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/whiteView"
+            app:layout_constraintStart_toStartOf="@id/whiteView"
+            app:layout_constraintTop_toBottomOf="@+id/termsOfTV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

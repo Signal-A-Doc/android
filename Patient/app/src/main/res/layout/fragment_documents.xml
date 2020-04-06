@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.DocumentsFragment">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addDocTV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@drawable/blue_border_box"
+            android:drawableStart="@mipmap/ic_schedule_blue"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_50sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="+ ADD DOCUMENT"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/docRV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/addDocTV"
+            app:layout_constraintEnd_toEndOf="@id/addDocTV"
+            app:layout_constraintTop_toBottomOf="@id/addDocTV"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"/>
+
+
+
+        <View
+            android:id="@+id/docV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+
+            android:background="@drawable/box_green_clicked"
+            app:layout_constraintTop_toBottomOf="@id/docRV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/noDocIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@mipmap/ic_nodocument"
+            app:layout_constraintEnd_toEndOf="@id/docV"
+            app:layout_constraintStart_toStartOf="@id/docV"
+            app:layout_constraintTop_toTopOf="@id/docV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/noDocTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="No Document Found"
+            android:textColor="@color/Neon"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="@id/docV"
+            app:layout_constraintStart_toStartOf="@id/docV"
+            app:layout_constraintTop_toBottomOf="@id/noDocIV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="Tap to add"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/noDocTV"
+            app:layout_constraintStart_toStartOf="@id/noDocTV"
+            app:layout_constraintTop_toBottomOf="@id/noDocTV" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.PaymentFragment">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/paymentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/primary_card"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardBackIV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/dark_blue_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/paymentTV"
+            app:layout_constraintTop_toBottomOf="@id/paymentTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cardNumberTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="****   ****   ****   4353"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="@id/cardBackIV"
+            app:layout_constraintTop_toTopOf="@id/cardBackIV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/expDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mastercard 12/22"
+            android:textColor="@color/MediumBlue"
+            app:layout_constraintStart_toStartOf="@id/cardNumberTV"
+            app:layout_constraintTop_toBottomOf="@id/cardNumberTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardCheckIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@mipmap/ic_launcher_checked"
+            app:layout_constraintBottom_toBottomOf="@id/cardNumberTV"
+            app:layout_constraintEnd_toEndOf="@id/cardBackIV"
+            app:layout_constraintTop_toTopOf="@id/cardNumberTV" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addedOnTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/added_on"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="@id/cardBackIV"
+            app:layout_constraintTop_toBottomOf="@id/cardBackIV" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jan 15, 2020"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/addedOnTV"
+            app:layout_constraintEnd_toEndOf="@id/cardBackIV"
+            app:layout_constraintTop_toTopOf="@+id/addedOnTV" />
+
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@color/GrayLight"
+            app:layout_constraintEnd_toEndOf="@id/cardBackIV"
+            app:layout_constraintStart_toStartOf="@id/addedOnTV"
+            app:layout_constraintTop_toBottomOf="@id/addedOnTV" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/deleteIconOV"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@mipmap/ic_delete"
+            app:layout_constraintStart_toStartOf="@+id/viewLine"
+            app:layout_constraintTop_toBottomOf="@+id/viewLine" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deleteCardTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/delete_card"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintBottom_toBottomOf="@id/deleteIconOV"
+            app:layout_constraintStart_toEndOf="@id/deleteIconOV"
+            app:layout_constraintTop_toTopOf="@id/deleteIconOV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

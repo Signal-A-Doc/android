@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.fragment.AppointmentInfoThreeFragment">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/doYouTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="@string/which_medical_condition"
+                android:textColor="@color/Neon"
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/genralSymptopmsTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/please_include_past_current_medical_condition"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@+id/doYouTV"
+                app:layout_constraintTop_toBottomOf="@+id/doYouTV" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/GrayLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/genralSymptopmsTv"
+                app:layout_constraintTop_toBottomOf="@id/genralSymptopmsTv" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/thyroidTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/abnormal_thyroid"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/thyroidCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/thyroidTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/thyroidTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/anxietyTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/anxiety"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/thyroidTV"
+                app:layout_constraintTop_toBottomOf="@+id/thyroidTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/anxietyCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/anxietyTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/anxietyTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/arthritisTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/arthritis"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/anxietyTV"
+                app:layout_constraintTop_toBottomOf="@+id/anxietyTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/arthritisCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/arthritisTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/arthritisTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/asthmaTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/asthma"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/arthritisTV"
+                app:layout_constraintTop_toBottomOf="@+id/arthritisTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/asthmaCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/asthmaTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/asthmaTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cancerTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/cancer"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/asthmaTV"
+                app:layout_constraintTop_toBottomOf="@+id/asthmaTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cancerCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/cancerTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/cancerTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/copdTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/copd"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/cancerTV"
+                app:layout_constraintTop_toBottomOf="@+id/cancerTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/copdCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/copdTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/copdTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/depressionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/depression"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/copdTV"
+                app:layout_constraintTop_toBottomOf="@+id/copdTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/depressionCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/depressionTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/depressionTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/diabetesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/diabetes"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/depressionTV"
+                app:layout_constraintTop_toBottomOf="@+id/depressionTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/diabetesCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/diabetesTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/diabetesTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/heartTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/heart_disease_chf_mi"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/diabetesTV"
+                app:layout_constraintTop_toBottomOf="@+id/diabetesTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/heartCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/heartTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/heartTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pressureTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/high_blood_pressure"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/heartTV"
+                app:layout_constraintTop_toBottomOf="@+id/heartTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/pressureCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/pressureTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/pressureTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cholesterolTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/high_cholesterol"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/pressureTV"
+                app:layout_constraintTop_toBottomOf="@+id/pressureTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cholesterolCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/cholesterolTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/cholesterolTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/faintingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/history_of_fainting_seizure"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/cholesterolTV"
+                app:layout_constraintTop_toBottomOf="@+id/cholesterolTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/faintingCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/faintingTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/faintingTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fallsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/history_of_falls"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/faintingTV"
+                app:layout_constraintTop_toBottomOf="@+id/faintingTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/fallsCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/fallsTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/fallsTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/skinTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/history_of_skin_cancer"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/fallsTV"
+                app:layout_constraintTop_toBottomOf="@+id/fallsTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/skinCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/skinTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/skinTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sTDTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/history_of_std"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/skinTV"
+                app:layout_constraintTop_toBottomOf="@+id/skinTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/sTDCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/sTDTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/sTDTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/strokeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/history_of_stroke"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/sTDTV"
+                app:layout_constraintTop_toBottomOf="@+id/sTDTV" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/strokeCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                app:layout_constraintBottom_toBottomOf="@id/strokeTV"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/strokeTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/addTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:textColor="@color/MediumBlue"
+                android:textSize="@dimen/_13ssp"
+                android:drawableStart="@drawable/ic_add_black_24dp"
+                android:drawablePadding="@dimen/_3sdp"
+                android:text="@string/add_another_drug_allergy"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/strokeTV" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buttonCV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+
+                android:layout_marginTop="@dimen/_28sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:translationZ="@dimen/_5sdp"
+
+                app:cardElevation="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addTV"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addCardBT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/corner_blue_bt"
+                    android:text="continue"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/_15sdp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</layout>

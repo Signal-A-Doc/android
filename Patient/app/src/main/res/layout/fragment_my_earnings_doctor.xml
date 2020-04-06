@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <View
+        android:id="@+id/darkBlueV"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/dark_blue_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/balanceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wallet Balance"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/MediumBlue"
+            app:layout_constraintTop_toTopOf="@id/darkBlueV"
+            app:layout_constraintStart_toStartOf="@id/darkBlueV"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₦8,500"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_25ssp"
+            app:layout_constraintTop_toBottomOf="@id/balanceTV"
+            app:layout_constraintStart_toStartOf="@id/balanceTV"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="withdraw"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/White"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:background="@drawable/button_blue_shape"
+            app:layout_constraintEnd_toEndOf="@id/darkBlueV"
+            app:layout_constraintTop_toTopOf="@id/darkBlueV"
+            app:layout_constraintBottom_toBottomOf="@id/darkBlueV"
+      />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintTop_toBottomOf="@id/darkBlueV"
+            android:text="Feb 22 -feb28"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:gravity="center"
+            android:inputType="date"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableStart="@mipmap/ic_appointment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

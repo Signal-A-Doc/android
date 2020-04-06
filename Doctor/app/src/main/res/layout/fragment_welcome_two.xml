@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handleClick"
+            type="com.signalDoc_doctor.utils.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_bg_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideGL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".67" />
+
+
+        <com.signalDoc_doctor.utils.CircularStdBookTextView
+            android:id="@+id/accessTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_45sdp"
+            android:lineSpacingExtra="@dimen/_5sp"
+            android:text="@string/work_flexibly_extend_your_working_hours_and_work_when_it_suits_you"
+            android:textAlignment="center"
+            android:textColor="@color/name_color"
+            android:textSize="@dimen/_18sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideGL" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/skipTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35dp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+            android:text="@string/skip"
+            android:textColor="@color/SkipColor"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="@id/accessTV"
+            app:layout_constraintStart_toStartOf="@id/accessTV"
+            app:layout_constraintTop_toBottomOf="@+id/accessTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sliderIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_25sdp"
+            android:src="@mipmap/ic_slider_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/signInTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_25sdp"
+            android:fontFamily="@font/circularstd_book"
+            android:lineSpacingExtra="@dimen/_6sp"
+            android:onClick="@{(View)->handleClick.onHandleClick(View)}"
+            android:text="@string/sign_in"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sliderIV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sliderIV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

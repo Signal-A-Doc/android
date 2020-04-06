@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bookedIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:src="@mipmap/ic_payment_successfull"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/successTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="Payment successful"
+            android:textColor="@color/MediumBlue"
+            android:textSize="@dimen/_25ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookedIV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/yourPaymentTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Your payment to Signal a Doc was successful"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toEndOf="@id/successTV"
+            app:layout_constraintStart_toStartOf="@id/successTV"
+            app:layout_constraintTop_toBottomOf="@+id/successTV" />
+
+        <View
+            android:id="@+id/backV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_200sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/light_voilet_round_corner"
+            android:layout_margin="@dimen/_20sdp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/docProfileIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_doctor"
+                app:layout_constraintTop_toTopOf="@id/backV"
+                app:layout_constraintStart_toStartOf="@id/backV"
+                app:layout_constraintEnd_toEndOf="@id/backV"
+                android:layout_marginTop="@dimen/_30sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/docNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Adewale Shitu"
+            android:textColor="@color/DarkBluebg"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/docProfileIV"
+            app:layout_constraintStart_toStartOf="@id/docProfileIV"
+            app:layout_constraintEnd_toEndOf="@id/docProfileIV"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/saveCV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="@id/backV"
+            app:layout_constraintStart_toStartOf="@id/backV"
+            app:layout_constraintTop_toBottomOf="@id/docNameTV"
+            app:cardCornerRadius="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/saveBT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_blue_shape"
+                android:text="CALL"
+                android:drawableStart="@mipmap/ic_call_s"
+                android:paddingStart="@dimen/_100sdp"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/_10sdp"
+
+                android:textColor="@color/White"
+                android:textSize="@dimen/_15ssp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

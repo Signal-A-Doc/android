@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@toxsl.com >
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of ToXSL Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_75sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/circularstd_black"
+                    android:letterSpacing="0.1"
+                    android:lineSpacingExtra="@dimen/_8sp"
+                    android:text="10"
+                    android:textColor="@color/Neon"
+                    android:textSize="@dimen/_22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/monthTV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/monthTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/circularstd_black"
+                    android:letterSpacing="0.1"
+                    android:lineSpacingExtra="@dimen/_6sp"
+                    android:text="JAN"
+                    android:textColor="@color/Neon"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/dayTV"
+                    app:layout_constraintStart_toStartOf="@id/dayTV"
+                    app:layout_constraintTop_toBottomOf="@id/dayTV" />
+
+                <View
+                    android:id="@+id/viewLine"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:background="@color/Neon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/monthTV"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/callIconIV"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:src="@mipmap/ic_user_s"
+                    app:layout_constraintStart_toStartOf="@id/viewLine"
+                    app:layout_constraintTop_toTopOf="@id/viewLine" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/consulationTypeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/circularstd_book"
+                    android:lineSpacingExtra="@dimen/_6sp"
+                    android:text="@string/face_to_face_consulation"
+                    android:textColor="@color/DarkBluebg"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/callIconIV"
+                    app:layout_constraintStart_toEndOf="@id/callIconIV"
+                    app:layout_constraintTop_toTopOf="@+id/callIconIV" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/doctorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:fontFamily="@font/circularstd_book"
+                    android:lineSpacingExtra="@dimen/_6sp"
+                    android:text="Dr. Susan peters"
+                    android:textColor="@color/SkipColor"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintStart_toStartOf="@id/callIconIV"
+                    app:layout_constraintTop_toBottomOf="@id/callIconIV" />
+
+                <View
+                    android:id="@+id/circleView"
+                    android:layout_width="@dimen/_7sdp"
+                    android:layout_height="@dimen/_7sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/circle_grey"
+                    app:layout_constraintBottom_toBottomOf="@id/doctorName"
+                    app:layout_constraintStart_toEndOf="@id/doctorName"
+                    app:layout_constraintTop_toTopOf="@id/doctorName" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/circularstd_book"
+                    android:lineSpacingExtra="@dimen/_6sp"
+                    android:text="1:30 PM"
+                    android:textColor="@color/SkipColor"
+                    android:textSize="@dimen/_14sp"
+                    app:fontFamily="@font/circularstd_book"
+                    app:layout_constraintBottom_toBottomOf="@id/circleView"
+                    app:layout_constraintStart_toEndOf="@id/circleView"
+                    app:layout_constraintTop_toTopOf="@id/circleView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
